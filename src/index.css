@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+}
+
+* > *,
+::after,
+::before {
+	-webkit-font-smoothing: antialiased;
+	box-sizing: inherit;
+	font-family: inherit;
+	-webkit-tap-highlight-color: transparent;
+}
+
+input {
+	outline: none;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield; /* Для Firefox */
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none; /* Для Chrome, Safari, Opera */
+	margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
+	background: #060606;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: #060606;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 49;
+	padding-left: 2.5%;
+	padding-top: 60px;
+	transform: translateX(1000px);
+	z-index: -1;
+	transition: 300ms ease;
+}
+
+.overlay_load {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: #060606;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 49;
+	padding-left: 2.5%;
+	padding-top: 60px;
+}
+
+.show {
+	transform: translateX(0);
+	z-index: 49;
+}
+
+.content {
+	max-width: 95%;
+	margin: 0 auto;
+}
+
+.wrapper {
+	overflow-x: hidden;
+	background: #060606;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.shadow_input {
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.section_title {
+	color: #f90;
+	margin-bottom: 10px;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 40px;
+}
+
+@media screen and (max-width: 1025px) {
+	.overlay {
+		display: flex;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.section_title {
+		font-size: 24px;
+	}
+}
